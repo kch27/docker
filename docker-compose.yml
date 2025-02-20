@@ -18,8 +18,8 @@ services:
     container_name: apache2
     restart: always
     depends_on:
-      - db
-    ports:
+      - db   
+    ports:    
       - "80:80"
     volumes:
       - ./www:/var/www/html
