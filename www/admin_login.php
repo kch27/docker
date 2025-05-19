@@ -2,7 +2,8 @@
 session_start();
 require_once 'db_connection.php'; // Inclure la connexion PDO
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+// Vérification de la connexion en tant qu'administrateur
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['admin'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
@@ -30,12 +31,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion Admin</title>
+    <link rel="stylesheet" href="css/style_admin_login.css">
 </head>
 <body>
     <h2>Connexion à l'interface Admin</h2>
     <?php if (isset($error_message)): ?>
         <p style="color: red;"><?php echo $error_message; ?></p>
     <?php endif; ?>
+    
     <form method="POST" action="">
         <label for="username">Nom d'utilisateur :</label>
         <input type="text" name="username" required><br><br>
@@ -43,7 +46,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label for="password">Mot de passe :</label>
         <input type="password" name="password" required><br><br>
         
-        <button type="submit">Se connecter</button>
+        <button type="submit" name="admin">Se connecter en tant qu'admin</button>
+    </form>
+    
+    <!-- Bouton pour se connecter en tant qu'utilisateur -->
+    <form action="connexion.html" method="get">
+        <button type="submit">Se connecter en tant qu'utilisateur</button>
     </form>
 </body>
 </html>

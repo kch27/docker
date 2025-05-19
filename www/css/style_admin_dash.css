@@ -1,0 +1,133 @@
+/* admin_dashboard.css */
+
+/* Général */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style des tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+  background-color: rgba(0, 123, 255, 0.8);
+  color: white;
+}
+
+td img {
+  width: 100px;
+  border-radius: 8px;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Bouton pour revenir à la page client */
+.return-client-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.return-client-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Formulaire */
+form {
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form input[type="url"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+/* Liens de déconnexion */
+a {
+  text-decoration: none;
+  color: #f44336;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Statut de l'utilisateur */
+.status {
+  font-weight: bold;
+  color: #f44336;
+}

@@ -2,10 +2,10 @@
 // Fichier : db_connection.php
 
 // Connexion à la base de données
-$host = 'db'; // Nom du conteneur MySQL
-$dbname = 'login_system'; // Nom de la base de données
-$username = 'user'; // Nom d'utilisateur
-$password = 'user'; // Mot de passe
+$host = 'db';
+$dbname = 'login_system';
+$username = 'user';
+$password = 'user';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);

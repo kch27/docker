@@ -1,0 +1,116 @@
+/* Général */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://www.taurusclub.cz/wp-content/uploads/muay-thai.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Conteneur principal */
+.container.detail-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(30, 44, 72, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* Titre */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Bloc d’infos du combattant */
+.fighter-detail-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Image du combattant */
+.image-section img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #222;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Texte d’infos */
+.info-section {
+  max-width: 500px;
+  flex: 1;
+}
+
+.info-section p {
+  font-size: 1.15rem;
+  margin: 12px 0;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.info-section strong {
+  color: #fff;
+}
+
+/* Mise en valeur du palmarès */
+.palmares {
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Bouton retour */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 24px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Message d’erreur */
+.error-message {
+  font-size: 1.5rem;
+  color: #e74c3c;
+  margin-top: 40px;
+  background-color: rgba(231, 76, 60, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fighter-detail-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-section {
+    max-width: 100%;
+  }
+}
