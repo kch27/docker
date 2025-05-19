@@ -135,6 +135,7 @@ $fighters = $stmtFighters->fetchAll(PDO::FETCH_ASSOC);
             <tr>
                 <th>ID</th>
                 <th>Nom d'utilisateur</th>
+                <th>Rôle</th>
                 <th>Statut</th>
                 <th>Actions</th>
             </tr>
@@ -144,6 +145,7 @@ $fighters = $stmtFighters->fetchAll(PDO::FETCH_ASSOC);
                 <tr>
                     <td><?= $user['id']; ?></td>
                     <td><?= htmlspecialchars($user['username']); ?></td>
+                    <td><?= htmlspecialchars($user['role']); ?></td>
                     <td><?= $user['active'] ? 'Actif' : 'Inactif'; ?></td>
                     <td>
                         <a href="admin_dashboard.php?toggle_user_id=<?= $user['id']; ?>">
